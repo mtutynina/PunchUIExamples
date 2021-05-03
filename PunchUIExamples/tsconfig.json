@@ -1,0 +1,30 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "removeComments": false,
+    "target": "es6",
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "sourceMap": true,
+    "module": "commonjs",
+    "lib": [
+      "es6",
+      "dom",
+      "scripthost"
+    ],
+    "typeRoots": [ "./node_modules/@types", "./custom_typings" ],
+    "sourceRoot": ".",
+    "baseUrl": ".",
+    "rootDir": ".",
+    "paths": {
+      "app/*": [ "app/*" ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ]
+}

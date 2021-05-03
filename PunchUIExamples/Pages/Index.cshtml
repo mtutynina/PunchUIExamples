@@ -1,0 +1,12 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<pagination params="{ totalItems: 10, pageSize: 5 }"></pagination>
+
+@section Scripts {
+    <script src="~/dist/vendor.js" asp-append-version="true"></script>
+    <script src="~/dist/pagination-example.js" asp-append-version="true"></script>
+}
