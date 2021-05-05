@@ -5,7 +5,7 @@ ___
 
 ## Getting Started
 Make sure that you have VS 2019 at least 16.6,
-or alternatively [.NET SDK 3.1.5](https://dotnet.microsoft.com/download/dotnet-core)
+or alternatively [.NET SDK](https://dotnet.microsoft.com/download/dotnet-core)
 You can check by running  
 ```
 dotnet --info
