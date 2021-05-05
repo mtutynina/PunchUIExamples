@@ -1,0 +1,12 @@
+[*.cs]
+
+# CA1303: Do not pass literals as localized parameters
+dotnet_diagnostic.CA1303.severity = none
+
+# CA1054: Uri parameters should not be strings
+dotnet_diagnostic.CA1054.severity = suggestion
+
+[*.cshtml.cs]
+
+# SA1649: File name should match first type name
+dotnet_diagnostic.SA1649.severity = none
