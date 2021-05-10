@@ -1,29 +1,30 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="Index.cshtml.cs" company="Mariya Tutynina">
+// -----------------------------------------------------------------------
+// <copyright file="QueryStringNames.cshtml.cs" company="Mariya Tutynina">
 // Copyright (c) Mariya Tutynina. All rights reserved.
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace PunchUIExamples.Pages
+namespace PunchUIExamples.Pages.Razor.Pagination
 {
     using System;
     using System.Collections.Generic;
+    using System.Globalization;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.RazorPages;
     using PunchUIExamples.Models;
 
     /// <summary>
-    /// Index page model.
+    /// Page Model.
     /// </summary>
-    public class IndexModel : PageModel
+    public class QueryStringNamesModel : PageModel
     {
         private readonly PunchManager manager;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IndexModel"/> class.
+        /// Initializes a new instance of the <see cref="QueryStringNamesModel"/> class.
         /// </summary>
         /// <param name="manager">Data access manager.</param>
-        public IndexModel(PunchManager manager)
+        public QueryStringNamesModel(PunchManager manager)
         {
             this.manager = manager;
         }
@@ -41,13 +42,13 @@ namespace PunchUIExamples.Pages
         /// <summary>
         /// Gets or sets count of items to display on single page.
         /// </summary>
-        [BindProperty(Name = "pageSize", SupportsGet = true)]
+        [BindProperty(Name = "myPageSize", SupportsGet = true)]
         public int PageSize { get; set; } = 10;
 
         /// <summary>
         /// Gets or sets count of pages to skip for sort column.
         /// </summary>
-        [BindProperty(Name = "currentPage", SupportsGet = true)]
+        [BindProperty(Name = "myCurrentPage", SupportsGet = true)]
         public int CurrentPage { get; set; } = 1;
 
         /// <summary>
