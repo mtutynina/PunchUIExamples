@@ -1,39 +1,85 @@
 ﻿@page
-@model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Features list";
 }
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Adress</th>
-            <th>Company</th>
-            <th>Salary</th>
-            <th>E-mail</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var p in Model.Persons)
-        {
-            <tr>
-                <td>@p.FirstName</td>
-                <td>@p.LastName</td>
-                <td>@p.Address</td>
-                <td>@p.Company</td>
-                <td>@p.Salary</td>
-                <td>@p.Email</td>
-            </tr>
-        }
-    </tbody>
-</table>
-<pagination params="{ totalItems: @Model.Total,
-            pageSize: @Model.PageSize,
-            currentPage: @Model.CurrentPage,
-            useQueryStringParameters: true}"></pagination>
-
-@section Scripts {
-    <script src="~/dist/vendor.js" asp-append-version="true"></script>
-    <script src="~/dist/pagination-example.js" asp-append-version="true"></script>
-}
+<div>
+    In this project you will find <strong>Punch UI</strong> usage example. Knockout SPA Application example is presented on 
+    <a asp-page="SpaApplication">SPA</a> page. List of examples for Razor pages see below.
+</div>
+<div class="container py-4" id="hanging-icons">
+    <h3 class="pb-2 border-bottom">Pagination</h3>
+    <div class="row g-4 py-3 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                <i class="bi bi-tools"></i>
+            </div>
+            <div>
+                <h3>Basic</h3>
+                <p>
+                    Basic Razor usage example. Handle values with Bind Property and query strings.
+                </p>
+                <a class="btn btn-primary" asp-page="Razor/Pagination/BasicPagination">
+                    See in action
+                </a>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                <i class="bi bi-tools"></i>
+            </div>
+            <div>
+                <h3>Store page size in cookies.</h3>
+                <p>
+                    In order to provide same page size for all pages in application,
+                    pagination component can store page size in cookies. Change page size, and visit page with empty query strings
+                    to test behavior.
+                </p>
+                <a class="btn btn-primary" asp-page="Razor/Pagination/CookiePageSize">
+                    See in action
+                </a>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                <i class="bi bi-tools"></i>
+            </div>
+            <div>
+                <h3>Handle cookie name.</h3>
+                <p>
+                    Pass custom cookie name to component if you dont like default <code>pageSize</code> cookie name.
+                </p>
+                <a class="btn btn-primary" asp-page="Razor/Pagination/CookieName">
+                    See in action
+                </a>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                <i class="bi bi-tools"></i>
+            </div>
+            <div>
+                <h3>Handle query string names.</h3>
+                <p>
+                    Pass custom query sting names for page size and current page values.
+                </p>
+                <a class="btn btn-primary" asp-page="Razor/Pagination/QueryStringNames">
+                    See in action
+                </a>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                <i class="bi bi-tools"></i>
+            </div>
+            <div>
+                <h3>Custom Icons.</h3>
+                <p>
+                    Set class names for next and previous buttons to customize it
+                </p>
+                <a class="btn btn-primary" asp-page="Razor/Pagination/CustomIcons">
+                    See in action
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
